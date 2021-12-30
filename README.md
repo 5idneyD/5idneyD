@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @5idneyD
+- 👀 I’m interested in Python projects, mainly automation and machine learning
+- 🌱 I’m currently learning front-end skills, focusing on new JS frameworks
+- 💞️ I’m looking to collaborate on nothing atm.
+- 📫 How to reach me: email or linked in. Details are on my website: sld.pythonanywhere.com
