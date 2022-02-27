@@ -61,7 +61,7 @@ Grounds Maintenance: gm
 Window Cleaning: wc
 Concierge Services: cs
 No Specific Activity: (leave blank)\n
-Enter activity: """)
+""")
 
 specific_lot = input("""\nIs it a specific lot?\n
 Lot A: a
@@ -211,7 +211,10 @@ elif specific_activity == "cs":
     RANGE = f"G{a[0]}:H{a[1]}"
 
 else:
-    RANGE = "G1:H10700"
+    if specific_lot == "":
+        RANGE = "G1:H10700"
+    else:
+        RANGE = "G1:H10700"
 
 print(RANGE)
 
