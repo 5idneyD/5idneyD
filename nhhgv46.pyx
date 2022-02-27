@@ -243,7 +243,7 @@ time.sleep(1)
 
 cdef int row_number
 
-def main():
+cdef void main():
     row_number = 1
     
     for i in range(len(nhg['Item Code'])):
