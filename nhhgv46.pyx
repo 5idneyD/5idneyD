@@ -132,21 +132,6 @@ int_net = "AL"
 int_po = "AP"
 int_name = "AQ"
 
-# def specific_lot_range(activity="", lot=""):
-#     if activity =="ic":
-#         if lot == "a":
-#             RANGE = ""
-#         elif lot == "b":
-#             RANGE = ""
-#         elif lot == "c":
-#             RANGE = ""
-#         elif lot == "d":
-#             RANGE = ""
-#         elif lot == "nhg":
-#             RANGE = ""
-#         else:
-#             RANGE = "G1:H2126"
-
 
 # c internal cleaning = 1-1104
 # b internal cleaning = 1105-1333
@@ -166,6 +151,10 @@ int_name = "AQ"
 # nhg = 524
 # d = 123
 
+
+# function returns a tuple
+# first element is first_row number
+# second element is last_row number
 def specific_lot_range(specific_lot="", activity_starting_row=1, activity_ending_row=11000):
     if specific_lot == "c":
         first_row = activity_starting_row
@@ -174,7 +163,6 @@ def specific_lot_range(specific_lot="", activity_starting_row=1, activity_ending
         first_row = activity_starting_row + 1104
         last_row = activity_starting_row + 1104 + 229
     elif specific_lot == "a":
-        print(activity_starting_row, activity_ending_row)
         first_row = activity_starting_row + 1104 + 229
         last_row = activity_starting_row + 1104 + 229 + 146
     elif specific_lot == "nhg":
@@ -190,6 +178,8 @@ def specific_lot_range(specific_lot="", activity_starting_row=1, activity_ending
     return first_row, last_row
 
 
+# Provides deafualt range
+# Can probably be removed
 if specific_activity == "ic":
     RANGE = "G1:H2126"
     a = specific_lot_range(specific_lot, 1, 2126)
